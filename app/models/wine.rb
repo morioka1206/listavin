@@ -43,4 +43,18 @@ class Wine < ApplicationRecord
   belongs_to :winary
   belongs_to :country
   belongs_to :grape
+
+  with_options presence: true do
+  validates :wine_name
+  validates :wine_type
+  validates :stock
+  end
+
+  with_options numericality: true do
+  validates :stock
+  validates :vintage
+  validates :purchase_price
+  validates :selling_price
+  end
+
 end

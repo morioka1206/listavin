@@ -9,4 +9,6 @@
 #
 class Wholesaler < ApplicationRecord
   has_many :wines
+
+  validates :company_name, presence: true
 end

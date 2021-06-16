@@ -5,7 +5,7 @@ class WinesController < ApplicationController
   include Pagy::Backend
   before_action :set_q, only: [:index, :search, :copy]
   before_action :onlist_set_q, only: [:winelist, :winelist_search]
-  before_action :shop_name, only: [:index]
+  before_action :shop_name, except: %i[contact top]
   skip_before_action :login_required, only: [:top, :contact]
 
 

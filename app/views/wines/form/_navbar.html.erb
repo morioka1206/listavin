@@ -1,21 +1,21 @@
 <nav class="navbar is-light">
-		<div class="container">
+
 			<div class="navbar-brand">
-      <a class="navbar-item" href="https://google.com">
-        <%= image_tag 'logo.png' %>
-        listavin
-      </a>
-    </div>
+        <div class="navbar-item" href="https://google.com">
+          <%= image_tag 'logo.png' %>
+          listavin
+        </div>
+      </div>
+    
 			<div id="navbarMenu" class="navbar-menu">
 				<div class="navbar-end">
           <div class="navbar-item">
             <div class="field is-grouped">
       
-                <div class = "button navbar-item button-side is-primary ">
-                    <%= link_to  wines_index_path, class: "navbar-item is-size-4 is-primary button-side" do %>
-                      <i class="fas fa-house-user"></i>
-                    <% end %>
-                </div>
+
+                <%= link_to  wines_index_path, class: "navbar-item  button is-primary button-side" do %>
+                  <span class="is-size-4 home-icon "><i class="fas fa-house-user"></i></span>
+                <% end %>
 
                 <div class="navbar-item has-text-dark">店舗名：<%= @shop_name %></div>
             </div>
@@ -23,5 +23,4 @@
 				</div>
 			</div>
 
-		</div>
 </nav>

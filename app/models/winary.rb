@@ -10,4 +10,6 @@
 #
 class Winary < ApplicationRecord
   has_many :wines
+
+  validates :winary_name, presence: true
 end
