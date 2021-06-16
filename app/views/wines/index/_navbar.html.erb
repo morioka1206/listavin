@@ -1,14 +1,12 @@
 <nav class="navbar is-light is-fixed-top">
     <div class="navbar-brand">
-      <a class="navbar-item" href= "top">
+      <div class="navbar-item">
         <%= image_tag 'logo.png' %>
         listavin
-      </a>
+      </div>
     </div>
     <div id="navMenuExample2" class="navbar-menu">
       <div class="navbar-start">
-
-        <%# <%= link_to 'ホーム', wines_index_path, class: "navbar-item" %>
        
         <div class="navbar-item has-dropdown is-hoverable">
           <a class="navbar-link" href="#">
@@ -75,7 +73,10 @@
             <div class="navbar-item has-dropdown is-hoverable">
           <div class="navbar-item has-text-dark button-side">店舗名：<%= @shop_name %></div>
           <div class="navbar-dropdown ">
-            <%= link_to  "ログアウト", session_path(current_shop.id), method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } %>
+            <%= link_to   session_path(current_shop.id), method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } ,class:"navbar-item" do%>
+            <span class="icon-text"><i class="fas fa-sign-out-alt"></i>　ログアウト</span>
+            <% end %>
+            
           </div>
         </div>
           </div>

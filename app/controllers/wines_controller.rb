@@ -6,12 +6,17 @@ class WinesController < ApplicationController
   before_action :set_q, only: [:index, :search, :copy]
   before_action :onlist_set_q, only: [:winelist, :winelist_search]
   before_action :shop_name, only: [:index]
-  skip_before_action :login_required, only: [:top]
+  skip_before_action :login_required, only: [:top, :contact]
 
 
   def top
     
   end
+
+  def contact
+    
+  end
+  
   
   def index
     @q = Wine.ransack(params[:q])
