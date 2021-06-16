@@ -1,0 +1,222 @@
+
+  <nav class="navbar is-light" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://google.com">
+        <%= image_tag 'logo.png' %>
+        listavin
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+
+      <div class="navbar-end">
+        <a class="navbar-item">
+          listavinとは
+        </a>
+
+        <a class="navbar-item">
+          プラン
+        </a>
+        <%= link_to  "お問い合わせ", wines_contact_path ,class: "navbar-item" %>
+        <div class="navbar-item">
+        <div class="field is-grouped">
+            <p class="control">
+        <div class="button is-dark navbar-item">
+        <%= link_to  "新規店舗登録", new_shop_path , class:"navbar-item"  %>
+        </p>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+
+  <!-- Hero del producto -->
+  <section class="hero  listavin-color is-fullheight">
+
+  
+  <% if flash[:notice] %>
+    <div class="index-notice notification is-link">
+      <%= flash[:notice] %>
+    </div>
+  <% end %>
+   
+  <% if flash[:alert] %>
+    <div class="index-notice notification is-danger">
+      <%= flash[:alert] %>
+    </div>
+  <% end %>
+
+
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns  is-vcentered ">
+          <div class="column
+          is-10-mobile is-offset-1-mobile
+          is-10-tablet is-offset-1-tablet
+          is-5-desktop is-offset-1-desktop
+          is-5-widescreen is-offset-1-widescreen
+          is-5-fullhd is-offset-1-fullhd" data-aos="fade-down">
+          <div class="top-message">
+            <h1 class="new-tegomin is-size-1 mb-7">
+              <span class="lexend is-size-1">listavin</span>とは
+            </h1>
+            <h2 class="sawarabi is-size-5 mb-6">
+              世界中から届くワイン。<br>
+              ワインは１本１本個性的です。<br>
+              どんなワインだったかなと思うこともあると思います。
+              listavinならあなたのお店のワインの情報がまとめられます。
+            </h2>
+          </div>
+            <div class="buttons my-6">
+              <%= link_to  "新規登録", new_shop_path, class:"button is-black" %>
+              <%# <button class="button is-black">新規登録</button> %>
+              <%= link_to  "ログイン", login_path, class: "button" %>
+              <%# <button class="button">ログイン</button> %>
+            </div>
+          </div>
+          <div data-aos="fade-right" class="column
+          is-10-mobile is-offset-1-mobile
+          is-10-tablet is-offset-1-tablet
+          is-4-desktop is-offset-1-desktop
+          is-4-widescreen is-offset-1-widescreen
+          is-4-fullhd is-offset-1-fullhd">
+            <figure class="image is-square">
+              <%= image_tag 'logoLr.png' %>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero has-background-dark is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns  is-vcentered">
+          <div data-aos="fade-left" class="column
+          is-10-mobile is-offset-1-mobile
+          is-10-tablet is-offset-1-tablet
+          is-4-desktop is-offset-1-desktop
+          is-4-widescreen is-offset-1-widescreen
+          is-4-fullhd is-offset-1-fullhd">
+            <figure class="">
+              <img src="https://i.gyazo.com/64ba37023d26321722629f2ac6310cf8.png">
+            </figure>
+          </div>
+          <div data-aos="fade-down" class="column
+          is-10-mobile is-offset-1-mobile
+          is-10-tablet is-offset-1-tablet
+          is-5-desktop is-offset-1-desktop
+          is-5-widescreen is-offset-1-widescreen
+          is-5-fullhd is-offset-1-fullhd">
+            <h1 class="new-tegomin is-size-2 mb-7 has-text-light message-bottom">
+              ワインリストとしても
+            </h1>
+            <h2 class="sawarabi is-size-5">
+              listavinはワインリストとしての機能を持っています。<br>
+              在庫状況とリンクすることで今までの在庫がないけど載っているなんてこともなくなります。<br>
+              <p>このワインはワインリストに載せないなんてことも。</p>
+            </h2>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero listavin-color is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns  is-vcentered reverse-columns">
+          <div data-aos="fade-right" class="column
+          is-10-mobile is-offset-1-mobile
+          is-10-tablet is-offset-1-tablet
+          is-5-desktop is-offset-1-desktop
+          is-5-widescreen is-offset-1-widescreen
+          is-5-fullhd is-offset-1-fullhd">
+            <h1 class="new-tegomin is-size-2 message-bottom">
+              スムーズな接客で売り上げをアップ
+            </h1>
+            <h2 class="sawarabi is-size-5">
+              ワインに詳しいスタッフがお休みの日でも、<br>
+              詳しい情報がすぐに検索できます。<br>
+              ちょっとした情報はメモに情報を書き込んで共有できます。
+            </h2>
+          </div>
+          <div data-aos="fade-down" class="column
+          is-10-mobile is-offset-1-mobile
+          is-10-tablet is-offset-1-tablet
+          is-4-desktop is-offset-1-desktop
+          is-4-widescreen is-offset-1-widescreen
+          is-4-fullhd is-offset-1-fullhd" data-aos="fade-up">
+            <figure class="">
+              <img src="https://i.gyazo.com/9c23ee2833b23fc536a2d746fd7ad7d2.jpg">
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero has-text-centered has-background-info">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div data-aos="zoom-in-up" class="column is-8">
+            <h1 class="title titled is-1 mb-6 hannari">
+               <span id="typewriter" class="hannari"></span>
+            </h1>
+            <div class="has-text-light sawarabi">
+              ワインの情報を管理することで、お店の在庫状況を簡単に把握することができます。
+              すぐに検索することができるため、　今までにない提案ができるかもしれません。       
+              素敵な時間をつくるサポートします。
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.13.1/core.min.js"></script>
+  <script>
+    new Typewriter('#typewriter', {
+      strings: [ 'listavinをはじめましょう'],
+      autoStart: true,
+      loop: true,
+    });
+  </script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true
+    });
+  </script>
+
+  <style>
+    @media(max-width: 500px) {
+      .reverse-columns {
+        flex-direction: column-reverse;
+        display: flex;
+      }
+    }
+
+    .titled {
+      font-family: 'Merriweather', serif !important;
+      font-size: 58px !important;
+      font-weight: 400 !important;
+      line-height: 64px !important;
+    }
+
+    .subtitled {
+      font-family: 'Merriweather', serif !important;
+      font-size: 22px !important;
+      font-weight: 400 !important;
+      line-height: 36px !important;
+    }
+  </style>

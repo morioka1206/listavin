@@ -1,0 +1,64 @@
+<%= render 'wines/form/navbar' %>
+
+<% if flash[:alert] %>
+  <div class="notification is-danger">
+    <%= flash[:alert]%>
+  </div>
+<% end %>
+
+<section class= "hero is-fullheight listavin-color" id="app-1">
+  <%= form_with model: @wine ,url: wine_path(@wine.wine_id), method: :put do |f|%>
+      <%= f.hidden_field :wholesaler_id %>
+      <%= f.hidden_field :winary_id %>
+      <%= f.hidden_field :grape_id %>
+      <%= f.hidden_field :wine_id %>
+      <div class=" columns wineform ">
+
+        <%= render 'wines/form/left_form', f: f %>
+        
+        <%= render 'wines/form/right_form', f: f %>
+              
+          </div>
+        </div>
+        
+      </div> 
+      <div class="savebutton icon-text">
+          <%= f.button :type => "submit" "保存する", class:"button is-info is-fullwidth  is-rounded " do %>
+              <span>保存する　</span>
+              <span class="is-size-5">
+              <i class="far fa-save"></i>
+              </span>
+          <% end %>
+
+      </div>
+  <% end %>
+  
+</section>
+
+<script>
+new Vue({
+    el: '#app-1',
+    data: {
+        guideline_price : '',
+        purchase_price : '',
+        selling_price : '',
+        winename : '',
+        winaryname : '',
+        country : '',
+        grapes : '',
+        stock : '',
+        comment : '',
+        memo : '',
+        onlist : "",
+
+    },
+    computed: {
+      cost: function() { 
+      const answer = (this.guideline_price / this.selling_price)*100;
+      if(isNaN(answer)) return 0;
+      if(!isFinite(answer)) return 0;
+      return answer;
+    },
+    }
+});
+</script>

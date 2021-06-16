@@ -1,0 +1,34 @@
+<div class= "winelist-wine">
+          <div class="winelist-winenames">
+            <div class="winelist-winename-kana"><%= wine.wine_name_kana%></div>
+            <div class="winelist-winename">
+                <%= "●#{wine.wine_name}".upcase %>
+            
+                <div class="winelist-winaryname">
+                    <%="(#{wine.winary.winary_name})" %>
+                  <%# <div class="winaryname-kana">
+                  <%# <%= wine.winary.winaryname_kana%>
+                </div>
+                <!-- </div> -->
+            </div>
+          </div>
+          <div class="winelist-winearea">
+            <div class="winelist-winecountry">
+                <%= wine.country.name%>
+            </div>
+            <div class="winelist-winestate">
+                <%= wine.state %>
+            </div>
+          </div>
+          <div class="winelist-winegrapes">
+            <%= wine.grape_name %>
+          </div>
+      
+          <div class="winelist-comment">
+              <%= wine.comment %>
+          </div>
+          <div class="winelist-wineprice">
+              <%= "¥#{wine.selling_price.to_s(:delimited)}"%>
+          </div> 
+      
+</div>

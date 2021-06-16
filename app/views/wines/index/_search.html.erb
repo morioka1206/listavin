@@ -1,0 +1,51 @@
+<div class="container wine-search ">
+
+      <div class="field">
+        <%= search_form_for @q, url: search_wines_path do |f|%>
+            <div class="columns ">
+                  <div class="control column">
+                    <%= f.label :wine_name, "ワイン名、生産者、ワイン会社で検索する" , class:"is-size-7"%>
+                    <%= f.search_field :wine_name_or_wine_name_kana_or_winary_winary_name_or_winary_winary_name_kana_or_wholesaler_company_name_cont, class:"input is-small" %>
+                  </div>
+                  <div class="control column">
+                    <%= f.label :wine_name, "品種で検索する", class:"is-size-7"%>
+                  
+                    <%= f.search_field :grape_grape_name_cont, class:"input is-small" %>
+                  </div>
+            </div>
+              <div class="columns ">
+                    <div class="control column">
+                      <div>
+                      <%= f.label :selling_price, "販売価格帯で検索する", class:"is-size-7"%>
+                      </div>
+                      <span>
+                          <%= f.radio_button :selling_price_lteq, "4000", class:"radio" %>4,000円以下
+                          <%= f.radio_button :selling_price_lteq, "6000", class:"radio" %>6,000円以下
+                          <%= f.radio_button :selling_price_lteq, "8000", class:"radio" %>8,000円以下
+                          <%= f.radio_button :selling_price_lteq, "10000", class:"radio" %>10,000円以下
+                          <%= f.radio_button :selling_price_lteq, "20000", class:"radio" %>20,000円以下
+                          <%= f.radio_button :selling_price_gteq, "20000", class:"radio" %>20,000円以上
+                      </span>
+                    </div>
+
+                    <div class="control column">
+                      <%= f.collection_select :country_id_eq, Country.all,  :id, :name_kana, {prompt: "国名で検索する"}, {class: "select is-primary is-rounded"} %>
+                    </div>
+
+                    
+              </div>
+                    
+        
+      </div>
+      <div class="wine-search-submit">
+          <%= f.button :type => "submit" "検索する" ,class: "button is-warning search-button is-rounded" do %>
+              <span>検索する　</span>
+              <span class="is-size-5">
+              <i class="fas fa-search"></i>
+              </span>
+          <% end %>              
+      </div>
+    
+        <% end %>
+      <div class="pagination is-centered is-rounded has-text-centered wine-pagination"><%== pagy_bulma_nav(@pagy) %></div>
+</div>

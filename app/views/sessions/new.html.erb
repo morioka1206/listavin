@@ -1,0 +1,79 @@
+
+    <section class="hero is-fullheight listavin-color">
+
+    <% if flash[:notice] %>
+    <div class="index-notice notification is-link">
+      <%= flash[:notice]%>
+    </div>
+    <% end %>
+  
+  
+    <% if flash[:alert] %>
+        <div class="index-notice notification is-danger">
+          <%= flash[:alert] %>
+        </div>
+    <% end %>
+
+    <div class="hero-body has-text-centered is-pulled-left listavin-color">
+  
+        <div class="login notification listavin-color">
+          <%= image_tag 'logo.png' ,width: "40%", height: "40%" %>
+          <%= form_with url: login_path do |f| %>
+            <div class="field">
+              <div class="control">
+                <%= f.label :email , "メールアドレス"%>
+                <%= f.email_field :email, class: "input is-medium" %>
+              </div>
+            </div>
+            <div class="field">
+              <div class="control">
+                <%= f.label :password, "パスワード" %>
+                <%= f.password_field :password, class: "input is-medium is-half" %>
+                
+              </div>
+            </div>
+            <br />
+            <%= f.submit 'ログイン', class: "button is-block is-fullwidth is-primary  is-medium is-rounded" %>
+          <% end %>
+          <br>
+          <nav class="level">
+            <div class="level-item has-text-centered">
+              <div class="is-size-7">
+                <a href="#">パスワードをお忘れですか?</a>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div class="is-size-7">
+                <%= link_to 'アカウントを新規登録', new_shop_path %>
+                <%# <a href="#">アカウントを新規登録</a> %>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="column is-8 is-offset-2">
+          <br>
+          <nav class="level">
+            <div class="level-left">
+              <div class="level-item">
+                <span class="icon">
+                  <%= link_to "https://twitter.com" do %>
+                  <i class="fab fa-twitter"></i>
+                  <% end %>
+                </span> &emsp;
+                <span class="icon">
+                  <%= link_to "https://facebook.com" do %>
+                  <i class="fab fa-facebook"></i>
+                  <% end %>
+              </div>
+            </div>
+            <div class="level-right">
+              <small class="level-item" style="color: var(--textLight)">
+                &copy; Listavin
+              </small>
+            </div>
+          </nav>
+        </div>
+        </div>
+      <%# </div> %>
+    </section>

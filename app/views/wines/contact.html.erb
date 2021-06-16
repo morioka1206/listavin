@@ -1,0 +1,81 @@
+
+	
+	<link rel="stylesheet" href="../css/contact.css">
+
+
+
+	<nav class="navbar is-light is-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://google.com">
+        <%= image_tag 'logo.png' %>
+        listavin
+      </a>
+    </div>
+
+    <div class="navbar-menu">
+
+      <div class="navbar-end">
+        <a class="navbar-item">
+          listavinとは
+        </a>
+
+        <a class="navbar-item">
+          プラン
+        </a>
+        <%= link_to  "トップページ", wines_top_path ,class: "navbar-item" %>
+        <div class="navbar-item">
+        <div class="field is-grouped">
+            <p class="control">
+        <div class="button is-dark navbar-item">
+        <%= link_to  "新規店舗登録", new_shop_path , class:"navbar-item"  %>
+        </p>
+        </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+
+	<!-- END NAV -->    
+	<section class="hero is-fullheight listavin-color">
+		<div class="contact">
+			<div class="container has-text-centered">
+				<div class="columns is-6 is-variable ">
+					<div class="column is-half">
+						<h1 class="is-size-2 lexend top-message">お問い合わせ</h1>
+						<p class="is-size-5">
+            まだメール機能はありません。
+            </p>
+					</div>
+					<div class="column is-half  has-text-left">
+						<div class="field">
+							<label class="label">お名前</label>
+							<div class="control">
+								<input class="input is-medium" type="text">
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">メールアドレス</label>
+							<div class="control">
+								<input class="input is-medium" type="text">
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">お問い合わせ内容</label>
+							<div class="control">
+								<textarea class="textarea is-large"></textarea>
+							</div>
+						</div>
+						<div class="control">
+							<button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">送信</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</section>
+<div class="navbar is-fixed-bottom is-white">
+	<%= render 'wines/index/footer' %>
+</div>

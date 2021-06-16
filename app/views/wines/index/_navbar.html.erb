@@ -1,0 +1,85 @@
+<nav class="navbar is-light is-fixed-top">
+    <div class="navbar-brand">
+      <a class="navbar-item" href= "top">
+        <%= image_tag 'logo.png' %>
+        listavin
+      </a>
+    </div>
+    <div id="navMenuExample2" class="navbar-menu">
+      <div class="navbar-start">
+
+        <%# <%= link_to 'ホーム', wines_index_path, class: "navbar-item" %>
+       
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">
+            価格帯
+          </a>
+          <div class="navbar-dropdown ">
+            <%= link_to  "~4000円", search_wines_path(@q, :'q[selling_price_gteq' => '2000', :'q[selling_price_lteq' => '4000'),class: "navbar-item" %>
+            <%= link_to  "~6000円", search_wines_path(@q, :'q[selling_price_gteq' => '4000', :'q[selling_price_lteq' => '6000'),class: "navbar-item" %>
+            <%= link_to  "~8000円", search_wines_path(@q, :'q[selling_price_gteq' => '6000', :'q[selling_price_lteq' => '8000'),class: "navbar-item" %>
+            <%= link_to  "~10000円", search_wines_path(@q, :'q[selling_price_gteq' => '8000', :'q[selling_price_lteq' => '10000'),class: "navbar-item" %>
+            <%= link_to  "~20000円", search_wines_path(@q, :'q[selling_price_gteq' => '10000', :'q[selling_price_lteq' => '20000'),class: "navbar-item" %>
+            <%= link_to  "20000円~", search_wines_path(@q, :'q[selling_price_gteq' => '20000'),class: "navbar-item" %>
+            <%# <hr class="navbar-divider">
+            <div class="navbar-item">
+              <div>version
+                <p class="has-text-info is-size-6-desktop">0.1.0</p>
+              </div>
+            </div> %>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            タイプ
+          </a>
+          <div class="navbar-dropdown ">
+            <%= link_to  "スパークリング", search_wines_path(@q, :'q[wine_type_eq' => 'スパークリング'),class: "navbar-item" %>
+            <%= link_to  "赤ワイン", search_wines_path(@q, :'q[wine_type_eq' => '赤ワイン'),class: "navbar-item" %>
+            <%= link_to  "白ワイン", search_wines_path(@q, :'q[wine_type_eq' => '白ワイン'),class: "navbar-item" %>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link"  href="#">
+            エリア
+          </a>
+          <div class="navbar-dropdown ">
+            <%= link_to  "オールドワールド", search_wines_path(@q, :'q[country_id_eq_any' => ["1","2","4","6","7","8","15","16","17"]),class: "navbar-item" %>
+            <%= link_to  "ニューワールド", search_wines_path(@q, :'q[country_id_eq_any' => ["5","9","10","11","12","13"]),class: "navbar-item" %>
+            <%= link_to  "日本ワイン", search_wines_path(@q, :'q[country_id_eq' => '3'),class: "navbar-item" %>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-end">
+      <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control is-flex">
+
+              <%= link_to  new_wine_path ,class: "navbar-item button button-side" do %>
+                    <span>＋新規登録</span>
+                    <span class="is-size-5 icon"><i class="fas fa-pencil-alt"></i></span>
+              <% end %>
+              <span>
+              <%= link_to  new_wine_path ,class: "navbar-item button is-warning button-side" do %>
+                    <span>ワインリスト</span>
+                    <span class="is-size-5 icon"><i class="fas fa-book"></i></span>
+              <% end %>
+              </span>
+
+                <%= link_to  wines_index_path, class: "navbar-item  button is-primary button-side" do %>
+                  <span class="is-size-4 "><i class="fas fa-house-user"></i></span>
+                <% end %>
+
+            </p>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+          <div class="navbar-item has-text-dark button-side">店舗名：<%= @shop_name %></div>
+          <div class="navbar-dropdown ">
+            <%= link_to  "ログアウト", session_path(current_shop.id), method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } %>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>

@@ -1,0 +1,26 @@
+
+<div class="wine-list">
+    <%= render 'wines/winelist/winelist_navbar' %>
+<div class= "wines-container container">
+  <%# <div class= "head">スパークリングワイン</div> %>
+  <%# <div class= "winenavi">
+    <div class="spark"><i class="fas fa-2x fa-wine-bottle"></i>
+      <%= link_to_unless_current "スパークリングワイン", "http://localhost:3000/wines/"%>
+    <%# </div>
+    <div class="white"><i class="fas fa-2x fa-wine-bottle"></i>
+      <%= link_to_unless_current "白ワイン", "http://localhost:3000/whitewines/"%>
+    <%# </div>
+    <div class="red"><i class="fas fa-2x fa-wine-bottle"></i>
+      <%= link_to_unless_current "赤ワイン", "http://localhost:3000/redwines/"%>
+    <%# </div>
+    <div class="orange"><i class="fas fa-2x fa-wine-bottle"></i>
+      <%= link_to_unless_current "オレンジワイン", "http://localhost:3000/orangewines/"%>
+    <%# </div> %>
+    <%# <div class="search"><i class="fas fa-search"></i></div> %>
+  <%# </div> %>
+  <div class= "wine-container">
+    <% @wines.each do |wine| %>
+      <%= render 'wines/winelist/winelist_content', wine: wine %>
+    <% end %>
+  </div>
+</div>

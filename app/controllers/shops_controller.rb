@@ -1,4 +1,6 @@
 class ShopsController < ApplicationController
+  skip_before_action :login_required
+
   def new
     @shop = Shop.new
   end
@@ -6,10 +8,9 @@ class ShopsController < ApplicationController
   def create
     @shop = Shop.new(shop_params)
     if @shop.save
-      redirect_to new_shop_path
-      flash[:notice] = 'ユーザーの作成に成功しました'
+      redirect_to login_path, notice: "店舗を作成しました。"
     else
-      flash.now[:alert] = 'ユーザーの作成に失敗しました'
+      flash.now[:alert] = '店舗の作成に失敗しました'
       render :new
     end
   end

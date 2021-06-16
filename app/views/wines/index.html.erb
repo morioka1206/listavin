@@ -1,0 +1,24 @@
+
+<%= render 'wines/index/navbar' %>
+
+<%= render 'wines/index/notice_alert' %>
+        
+<%= render 'wines/index/search' %>
+
+<div class="hero is-fullheight">
+    <table class="table is-background-info is-hoverable is-fullwidth">
+      <%= render 'wines/index/thead' %>
+
+      <tbody>
+        <% @wines.each do |wine|%>
+          <%= render 'wines/index/tbody', wine: wine %>
+        <% end %>
+        
+      
+        
+      </tbody>
+    </table>
+</div>
+
+<%= render 'wines/index/footer' %>
+

@@ -1,0 +1,155 @@
+<%# <div class=" columns wineform "> %>
+    <div class= "column">
+
+          <div class="columns">
+            <div class="winename">
+              <div class="column ">
+                <%= f.label :wine_name, "ワイン名（アルファベットもしくは日本語）", class:"is-size-7" %>
+                <p class="control has-icons-left">
+                    <%= f.text_field :wine_name , class: "leftform input", "v-model" => "winename" %>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-wine-glass-alt"></i>
+                    </span>
+                </p>
+              </div>
+              <div class="column">
+                <%= f.label :wine_name_kana, "ワイン名（カナ）" , class:"is-size-7"%>
+                <p class="control has-icons-left">
+                    <%= f.text_field :wine_name_kana, class: "input" %>
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-wine-glass-alt"></i>
+                    </span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="columns">
+            <div class="winaryname">
+                <div class="column ">
+                  <%= f.label :winary_name, "ワイン生産者（アルファベットもしくは日本語）" , class:"is-size-7"%>
+                  <p class="control has-icons-left">
+                      <%= f.text_field :winary_name, class: "input" , "v-model"=> "winaryname"%>
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-user-alt"></i>
+                      </span>
+                  </p>
+                </div>
+                <div class="column">
+                  <%= f.label :winary_name_kana, "ワイン生産者（カナ）" , class:"is-size-7"%>
+                  <p class="control has-icons-left">
+                      <%= f.text_field :winary_name_kana, class: "input" %>
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-user-alt"></i>
+                      </span>
+                  </p>
+                </div>
+            </div>
+          </div>
+
+          <div class="columns">
+                <div class="column">
+                  <div>
+                  <%= f.label :_winetype, "タイプ", class:"is-size-7"%>
+                  </div>
+                  <p class="control">
+                      <span class="icon is-small">
+                        <i class="fas fa-glass-cheers"></i>
+                      </span>
+                  <%= f.select :wine_type, ["スパークリング","赤ワイン","白ワイン"], {prompt: "種類を選択してください"} ,{class: "select", required: true}%>
+                  </p>
+                </div>
+                
+          </div>
+          <div class="columns">
+                <div class="column">
+                    <div>
+                    <%= f.label :country, "生産国", class:"is-size-7" %>
+                    </div>
+                    <p class="control">
+                        <span class="icon is-small">
+                          <i class="fas fa-flag-usa"></i>
+                        </span>
+                    <%= f.collection_select(:country_id, Country.all, :id, :name_kana, {prompt: "国名を選択してください"}, {class: "select"}) %>
+                    </p>
+                  </div>
+                <div class="column state">
+                  <%= f.label :state, "州・地域名", class:"is-size-7"%>
+                  <p class="control has-icons-left">
+                      <%= f.text_field :state , class: "input"%>
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-city"></i>
+                      </span>
+                  </p>
+                </div>
+          </div>
+          
+
+          <div class="columns">
+                <div class="column">
+                  <%= f.label :grape_name, "ぶどう品種", class:"is-size-7"%>
+                  <p class="control has-icons-left">
+                  <%= f.text_field :grape_name , class: "input", "v-model" => "grapes"%>
+                  <span class="icon is-small is-left">
+                        <i><%= image_tag 'grape.svg', class: "image is-16x16"%></i>
+                      </span>
+                  </p>
+            </div>
+          </div>
+
+          <div class="columns">
+                <div class="column is-half">
+                  <%= f.label :vintage, "ヴィンテージ", class:"is-size-7" %>
+                  <p class="control has-icons-left">
+                  <%= f.text_field :vintage, class: "input" %>
+                      <span class="icon is-small is-left">
+                        <i class="far fa-calendar-alt"></i>
+                      </span>
+                  </p>
+                </div>
+          </div>
+
+          <div class="columns is-flex-desktop">
+                <div class="column is-half">
+                  <%= f.label :purchase_price, "仕入れ価格", class:"is-size-7" %>
+                  <p class="control has-icons-left">
+                  <%= f.number_field :purchase_price, class: "input", "v-model"=>"guideline_price"%>
+                      <span class="icon is-small is-left">
+                        <i class="fas fa-truck"></i>
+                      </span>
+                  </p>
+                </div>
+                <div class="column is-half">
+                <label class="is-size-6">販売価格目安
+                <p>{{ guideline_price * 3}}円</p>
+                </div>
+          </div>
+          <div class="columns is-flex-desktop">
+                <div class="column is-half">
+                  <%= f.label :selling_price, "販売価格" , class:"is-size-7"%>
+                  <p class="control has-icons-left">
+                  <%= f.number_field :selling_price , class: "input", "v-model"=>"selling_price"%>
+                      <span class="icon is-small is-left">
+                        <i class="far fa-money-bill-alt"></i>
+                      </span>
+                  </p>
+                </div>
+                <div class="column is-half">
+                <label class="is-size-6">原価率
+                <p>{{ Math.floor(cost || '0') }} %</p>
+                </div>
+          </div>
+          
+          <div class="columns">
+                <div class="column">
+                  <%= f.label :company_name, "ワイン会社", class:"is-size-7"%>
+                  <p class="control has-icons-left">
+                  <%= f.text_field :company_name , class: "input"%>
+                    <span class="icon is-small is-left">
+                        <i class="far fa-building"></i>
+                      </span>
+                  </p>
+                </div>
+          </div>
+    </div>

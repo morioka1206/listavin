@@ -1,0 +1,48 @@
+<div class="column">
+          <div class="columns">
+                <div class="column">
+                <%= f.label :comment,"テイスティングコメント", class:"is-size-7" %>
+                <p class="control has-icons-left">
+                <%= f.text_area :comment, class:"textarea", "v-model" => "comment" %>
+                  <span class="icon is-small is-left">
+                        <i class="far fa-comments"></i>
+                      </span>
+                  </p>
+                </div>
+          </div>
+          <br>
+          <div class="columns">
+                <div class="column">
+                  <%= f.label :memo,"メモ", class:"is-size-7" %>
+                  <p class="control has-icons-left">
+                  <%= f.text_area :memo, class:"textarea", "v-model" => "memo" %>
+                    <span class="icon is-small is-left">
+                        <i class="far fa-sticky-note"></i>
+                      </span>
+                  </p>
+                </div>
+          </div>
+          <div class="columns">
+                <div class="column is-one-quarter">
+                  <%= f.label :stock, "在庫数", class:"is-size-7" %>
+                  <p class="control has-icons-left">
+                  <%= f.number_field :stock, min: 0 , class: "input", "v-model" => "stock"%>
+                    <span class="icon is-small is-left">
+                        <i class="fas fa-warehouse"></i>
+                      </span>
+                  </p>
+                </div>
+          </div>
+        
+          <br>
+          <div class="columns">
+                <div class="column">
+                  <div>
+                  <%= f.label :onlist,"ワインリストに載せる場合はチェックを入れてください。", class:"is-size-7"%>
+                  </div>
+                  <span class="icon">
+                    <i class="fas fa-book"></i>
+                  </span>
+                  <%= f.check_box :onlist ,{checked: false, class: "app_checkbox", "v-model" => "onlist"}, "true", "false" %>
+                </div>
+          </div>

@@ -1,0 +1,29 @@
+<nav class="navbar is-transparent" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="https://bulma.io">
+      <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+    </a>
+  </div>
+
+  <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-start">
+        <%= link_to  "Home", wines_winelist_path ,class:"navbar-item" %>
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          Type<i class="fas fa-wine-bottle fa-sm"></i>
+
+        </a>
+        <div class="navbar-dropdown ">
+              <%= link_to  "スパークリング", winelist_search_wines_path(@q, :'q[wine_type_eq' => 'スパークリング'),class: "navbar-item" %>
+              <%= link_to  "赤ワイン", winelist_search_wines_path(@q, :'q[wine_type_eq' => '赤ワイン'),class: "navbar-item" %>
+              <%= link_to  "白ワイン", winelist_search_wines_path(@q, :'q[wine_type_eq' => '白ワイン'),class: "navbar-item" %>
+        </div>
+    </div>
+  </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="pagination is-centered is-rounded has-text-centered is-small"><%== pagy_bulma_nav(@pagy) %></div>
+      </div>
+    </div>
+</nav>

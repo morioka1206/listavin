@@ -1,18 +1,22 @@
 class WinesController < ApplicationController
-  require 'active_support'
-  require 'active_support/core_ext'
+  
 
   # before_action :wine_params, only: [:show, :update, :edit, :delete]
   include Pagy::Backend
   before_action :set_q, only: [:index, :search, :copy]
   before_action :onlist_set_q, only: [:winelist, :winelist_search]
-  before_action :shop_name
+  before_action :shop_name, only: [:index]
+  skip_before_action :login_required, only: [:top]
 
+
+  def top
+    
+  end
+  
   def index
     @q = Wine.ransack(params[:q])
     # @pagy, @wines = pagy(Wine.all)
     @pagy,@wines = pagy(@q.result, items: 30)
-   
     
   end
 
@@ -105,17 +109,19 @@ class WinesController < ApplicationController
 
   def wine_params
     params.permit(:grape_name, :winary_name, :winary_name_kana, :company_name, :wine_name, :wine_name_kana, :vintage, :comment, :purchase_price,:memo,
-      :selling_price, :stock, :onlist, :state, :country_id, :winary_id, :grape_id, :wine_id, :wholesaler_id, :grape_id, :wine_type).merge(shop_id: current_shop.id)
+      :selling_price, :stock, :onlist, :state, :country_id, :winary_id, :grape_id, :wine_id, :wholesaler_id, :wine_type).merge(shop_id: current_shop.id)
   end
 
   def update_wine_params
     params.require(:wine_form).permit(:grape_name, :winary_name, :winary_name_kana, :company_name, :wine_name, :wine_name_kana, :vintage, :comment, :purchase_price,:memo,
-      :selling_price, :stock, :onlist, :state, :country_id, :winary_id, :grape_ids, :wine_id, :wholesaler_id, :grape_id, :wine_type).merge(shop_id: current_shop.id)
+      :selling_price, :stock, :onlist, :state, :country_id, :winary_id, :wine_id, :wholesaler_id, :grape_id, :wine_type).merge(shop_id: current_shop.id)
   end
   
   def shop_name
     @shop_name = current_shop.name
   end
+
+
   
 
 end
