@@ -125,6 +125,7 @@ listavinの機能を大きく2つに分けると
   - CSS(Bulma)
   - Vue.js
 <br>
+
 - バックエンド
   - Ruby 2.6.6
   - Ruby on Rails 6.1.3
