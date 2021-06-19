@@ -2,45 +2,41 @@
 <nav class="navbar is-light">
 		<div class="container">
 			<div class="navbar-brand">
-      <a class="navbar-item" href="https://google.com">
-        <%= image_tag 'logo.png' %>
-        listavin
-      </a>
-    </div>
-			<div id="navbarMenu" class="navbar-menu">
-				<div class="navbar-end">
-          <div class="field is-grouped">
-            <div class="navbar-item">
-            <div class="field is-grouped">
-              <p class="control">
-                <div class = "button is-primary navbar-item button-side ">
-                    <%= link_to  wines_index_path, class: "navbar-item is-size-4" do %>
-                      <i class="fas fa-house-user"></i>
-                    <% end %>
-                </div>
+        <p class="navbar-item">
+          <%= image_tag 'logo.png' %>
+          listavin
+        </p>
+      </div>
 
-                <div class="button is-danger navbar-item button-side ">
-                    <%= link_to  wine_path(@wine.id),method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } , class: "navbar-item is-size-4" do %>
-                      <i class="far fa-trash-alt"></i>
-                    <% end %>
-                <%# <%= link_to '削除', wine_path(@wine.id),method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } %>
-                </div>
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <div class="field is-grouped">
+                    <div class="navbar-item">
+                        <div class="field is-grouped">
 
-                <div class="button is-dark navbar-item  button-side">
-                    <%= link_to  copy_wine_path(@wine.id), data: { confirm: "コピーしてよろしいですか？", commit: "コピーする", cancel: "やめる", title: "ご確認ください" } , class: "navbar-item is-size-4" do %>
-                        <i class="fas fa-copy"></i>
-                    <% end %>
-                <%# <%= link_to 'コピー', copy_wine_path(@wine.id), data: { confirm: "コピーしてよろしいですか？", commit: "コピーする", cancel: "やめる", title: "ご確認ください" } %>
-                </div>
+                        <p class="control is-flex">
 
-              </p>
-              <p class="control">
-                <div class="navbar-item has-text-dark">店舗名：<%= @shop_name %></div>
-              </p>
+                          <%= link_to  wines_index_path, class: "navbar-item  button is-primary button-side" do %>
+                              <span class="is-size-4 home-icon"><i class="fas fa-house-user"></i></span>
+                            <% end %>
+                      
+                          <%= link_to  wine_path(@wine.id),method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } , class: "navbar-item  button is-danger button-side" do %>
+                              <span class="is-size-4 home-icon"><i class="far fa-trash-alt"></i></span>
+                            <% end %>
+                        
+                          
+                            <%= link_to  copy_wine_path(@wine.id), data: { confirm: "コピーしてよろしいですか？", commit: "コピーする", cancel: "やめる", title: "ご確認ください" } , class: "navbar-item  button is-dark button-side" do %>
+                              <span class="is-size-4 home-icon"><i class="fas fa-copy"></i></span>
+                            <% end %>
+                        </p>
+
+                          <p class="control">
+                            <div class="navbar-item has-text-dark">店舗名：<%= @shop_name %></div>
+                          </p>
+                        </div>
+                  </div>
             </div>
-          </div>
-				</div>
-			</div>
+        </div>
 		</div>
 	</nav>
 
@@ -242,11 +238,15 @@
             <div class="message-header">
               <p class="icon-text">
                 <span class="icon"><i class="fas fa-book"></i></span>
-                <span>在庫</span>  
+                <span>オンリスト</span>  
               </p>
             </div>  
             <div class="message-body">
-              <p><%=@wine.onlist%></p>
+              <% if @wine.onlist %>
+                  <p><%=  "オンリスト" %></p>
+                  <% else %>
+                  <p><%= "未掲載" %></p>
+              <%end%>
             </div>
           </article>
 

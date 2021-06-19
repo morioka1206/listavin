@@ -9,7 +9,12 @@
     <td><%= wine.purchase_price %></td>
     <td><%= wine.selling_price%></td>
     <td><%= wine.wholesaler.company_name%></td>
-    <td><%= wine.onlist %></td>
+    <% if wine.onlist %>
+        <td><%=  "onlist" %></td>
+        <% else %>
+        <td><%= "" %></td>
+    <%end%>
+    
     <td class="is-flex-desctop">
     
         <div class="button is-info">
