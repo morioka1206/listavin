@@ -1,6 +1,6 @@
 <tr>
     <td><%= wine.id%>
-    <td><%= link_to  wine.wine_name, url: "#"%>
+    <td><%= link_to wine.wine_name, wine_path(wine.id) %>
     <td><%= wine.wine_name_kana%></td>
     <td><%= wine.winary.winary_name%></td>
     <td><%= wine.winary.winary_name_kana%></td>

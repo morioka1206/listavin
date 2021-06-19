@@ -2,17 +2,17 @@ class WineForm
   include ActiveModel::Model
   include ActiveModel::Attributes
   attr_accessor :grape_name, :winary_name, :winary_name_kana, :company_name, :wine_name, :wine_name_kana, :vintage, :comment, :memo, :purchase_price,
-  :selling_price, :stock, :onlist, :state, :country_id, :shop_id, :wine_id, :grape_id, :wholesaler_id, :winary_id, :wine_type, :grape_name
+  :selling_price, :stock, :onlist, :state, :country_id, :shop_id, :wine_id, :grape_id, :wholesaler_id, :winary_id, :wine_type
 
   # delegate :persisted?, to: :wine
 
   def save
     ActiveRecord::Base.transaction do
-    winary = Winary.find_or_create_by(winary_name: winary_name, winary_name_kana: winary_name_kana)
-    wholesaler = Wholesaler.find_or_create_by(company_name: company_name)
-    grape = Grape.find_or_create_by(grape_name: grape_name)
-    wine = Wine.find_or_create_by(wine_name: wine_name, wine_name_kana: wine_name_kana, vintage: vintage, comment: comment, memo: memo, purchase_price: purchase_price, wine_type: wine_type,grape_id: grape_id,
-    selling_price: selling_price, stock: stock, onlist: onlist, state: state, country_id: country_id, winary_id: winary.id, wholesaler_id: wholesaler.id, shop_id: shop_id)
+      winary = Winary.create(winary_name: winary_name, winary_name_kana: winary_name_kana)
+      wholesaler = Wholesaler.find_or_create_by(company_name: company_name)
+      grape = Grape.find_or_create_by(grape_name: grape_name)
+      wine = Wine.find_or_create_by(wine_name: wine_name, wine_name_kana: wine_name_kana, vintage: vintage, comment: comment, memo: memo, purchase_price: purchase_price, wine_type: wine_type,grape_id: grape.id,
+      selling_price: selling_price, stock: stock, onlist: onlist, state: state, country_id: country_id, winary_id: winary.id, wholesaler_id: wholesaler.id, shop_id: shop_id)
     end
   end
 
@@ -24,7 +24,7 @@ class WineForm
       wholesaler.update(company_name: company_name)
       Grape.update(grape_name: grape_name )
       wine = Wine.find_by(id: wine_id)
-      wine.update(wine_name: wine_name, wine_name_kana: wine_name_kana, vintage: vintage, comment: comment, memo: memo, purchase_price: purchase_price, wine_type: wine_type,
+      wine.update( wine_name: wine_name, wine_name_kana: wine_name_kana, vintage: vintage, comment: comment, memo: memo, purchase_price: purchase_price, wine_type: wine_type,
       selling_price: selling_price, stock: stock, onlist: onlist, state: state, country_id: country_id, winary_id: winary.id, wholesaler_id: wholesaler.id, shop_id: shop_id)
     end
   end

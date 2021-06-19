@@ -23,10 +23,12 @@ class WinesController < ApplicationController
     # @pagy, @wines = pagy(Wine.all)
     @pagy,@wines = pagy(@q.result, items: 30)
     
+    
   end
 
   def winelist
     @pagy,@wines = pagy(@q.result, items: 8)
+    
   end
 
   def winelist_search
@@ -67,6 +69,9 @@ class WinesController < ApplicationController
     wine = Wine.find(params[:id])
     wine_form = WineForm.new
     @wine = wine_form.set_attributes(wine)
+    
+    binding.pry
+    
     
   end
 
