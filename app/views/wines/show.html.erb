@@ -18,16 +18,20 @@
 
                           <%= link_to  wines_index_path, class: "navbar-item  button is-primary button-side" do %>
                               <span class="is-size-4 home-icon"><i class="fas fa-house-user"></i></span>
-                            <% end %>
+                          <% end %>
                       
+                          <%= link_to  edit_wine_path(@wine.id), class: "navbar-item  button is-info button-side" do %>
+                              <span class="is-size-4 home-icon"><i class="fas fa-edit"></i></span>
+                          <% end %>
+
                           <%= link_to  wine_path(@wine.id),method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } , class: "navbar-item  button is-danger button-side" do %>
                               <span class="is-size-4 home-icon"><i class="far fa-trash-alt"></i></span>
-                            <% end %>
+                          <% end %>
                         
                           
-                            <%= link_to  copy_wine_path(@wine.id), data: { confirm: "コピーしてよろしいですか？", commit: "コピーする", cancel: "やめる", title: "ご確認ください" } , class: "navbar-item  button is-dark button-side" do %>
+                          <%= link_to  copy_wine_path(@wine.id), data: { confirm: "コピーしてよろしいですか？", commit: "コピーする", cancel: "やめる", title: "ご確認ください" } , class: "navbar-item  button is-dark button-side" do %>
                               <span class="is-size-4 home-icon"><i class="fas fa-copy"></i></span>
-                            <% end %>
+                          <% end %>
                         </p>
 
                           <p class="control">
@@ -122,7 +126,7 @@
               </p>
             </div>  
             <div class="message-body">
-              <p>カベルネソーヴィニヨン</p>
+              <p><%= @wine.grape.grape_name %></p>
             </div>
           </article>
 

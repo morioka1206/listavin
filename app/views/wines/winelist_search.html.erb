@@ -1,8 +1,7 @@
 
-<div class="wine-list">
+<div class="wine-list listavin-color">
     <%= render 'wines/winelist/winelist_navbar' %>
-<div class= "wines-container container">
-  <%# <div class= "head">スパークリングワイン</div> %>
+  <%# < class= "head">スパークリングワイン</> %>
   <%# <div class= "winenavi">
     <div class="spark"><i class="fas fa-2x fa-wine-bottle"></i>
       <%= link_to_unless_current "スパークリングワイン", "http://localhost:3000/wines/"%>
@@ -18,7 +17,7 @@
     <%# </div> %>
     <%# <div class="search"><i class="fas fa-search"></i></div> %>
   <%# </div> %>
-  <div class= "wine-container">
+  <div class= "wine-container listavin-color">
     <% @results.each do |wine| %>
         <%= render 'wines/winelist/winelist_content', wine: wine %>
         

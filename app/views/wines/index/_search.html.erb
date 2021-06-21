@@ -35,17 +35,18 @@
                     
               </div>
                     
-        
+        <div class="wine-search-submit">
+              <%= f.button :type => "submit" "検索する" ,class: "button is-dark search-button is-rounded" do %>
+                  <span>検索する　</span>
+                  <span class="is-size-5">
+                  <i class="fas fa-search"></i>
+                  </span>
+              <% end %>              
+          </div>
+          <% end %>
       </div>
-      <div class="wine-search-submit">
-          <%= f.button :type => "submit" "検索する" ,class: "button is-dark search-button is-rounded" do %>
-              <span>検索する　</span>
-              <span class="is-size-5">
-              <i class="fas fa-search"></i>
-              </span>
-          <% end %>              
-      </div>
+          
     
-        <% end %>
+      
       <div class="pagination is-centered is-rounded has-text-centered wine-pagination"><%== pagy_bulma_nav(@pagy) %></div>
 </div>

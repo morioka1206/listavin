@@ -6,7 +6,7 @@
               <div class="column ">
                 <%= f.label :wine_name, "ワイン名（アルファベットもしくは日本語）", class:"is-size-7" %>
                 <p class="control has-icons-left">
-                    <%= f.text_field :wine_name , class: "leftform input", "v-model" => "winename" %>
+                    <%= f.text_field :wine_name , class: "leftform input"%>
                     <span class="icon is-small is-left">
                       <i class="fas fa-wine-glass-alt"></i>
                     </span>
@@ -30,7 +30,7 @@
                 <div class="column ">
                   <%= f.label :winary_name, "ワイン生産者（アルファベットもしくは日本語）" , class:"is-size-7"%>
                   <p class="control has-icons-left">
-                      <%= f.text_field :winary_name, class: "input" , "v-model"=> "winaryname"%>
+                      <%= f.text_field :winary_name, class: "input"%>
                       <span class="icon is-small is-left">
                         <i class="fas fa-user-alt"></i>
                       </span>
@@ -90,7 +90,7 @@
                 <div class="column">
                   <%= f.label :grape_name, "ぶどう品種", class:"is-size-7"%>
                   <p class="control has-icons-left">
-                  <%= f.text_field :grape_name , class: "input", "v-model" => "grapes"%>
+                  <%= f.text_field :grape_name , class: "input"%>
                   <span class="icon is-small is-left">
                         <i><%= image_tag 'grape.svg', class: "image is-16x16"%></i>
                       </span>
@@ -114,7 +114,7 @@
                 <div class="column is-half">
                   <%= f.label :purchase_price, "仕入れ価格", class:"is-size-7" %>
                   <p class="control has-icons-left">
-                  <%= f.number_field :purchase_price, min: 0, class: "input", "v-model"=>"guideline_price"%>
+                  <%= f.number_field :purchase_price, min: 0, class: "input"%>
                       <span class="icon is-small is-left">
                         <i class="fas fa-truck"></i>
                       </span>
@@ -129,7 +129,7 @@
                 <div class="column is-half">
                   <%= f.label :selling_price, "販売価格" , class:"is-size-7"%>
                   <p class="control has-icons-left">
-                  <%= f.number_field :selling_price ,min:0, class: "input", "v-model"=>"selling_price"%>
+                  <%= f.number_field :selling_price ,min:0, class: "input"%>
                       <span class="icon is-small is-left">
                         <i class="far fa-money-bill-alt"></i>
                       </span>

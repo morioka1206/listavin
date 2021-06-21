@@ -4,28 +4,26 @@ class WineForm
   attr_accessor :grape_name, :winary_name, :winary_name_kana, :company_name, :wine_name, :wine_name_kana, :vintage, :comment, :memo, :purchase_price,
   :selling_price, :stock, :onlist, :state, :country_id, :shop_id, :wine_id, :grape_id, :wholesaler_id, :winary_id, :wine_type
 
-  # delegate :persisted?, to: :wine
 
   def save
     ActiveRecord::Base.transaction do
-      winary = Winary.create(winary_name: winary_name, winary_name_kana: winary_name_kana)
+      winary = Winary.find_or_create_by(winary_name: winary_name, winary_name_kana: winary_name_kana)
       wholesaler = Wholesaler.find_or_create_by(company_name: company_name)
       grape = Grape.find_or_create_by(grape_name: grape_name)
-      wine = Wine.find_or_create_by(wine_name: wine_name, wine_name_kana: wine_name_kana, vintage: vintage, comment: comment, memo: memo, purchase_price: purchase_price, wine_type: wine_type,grape_id: grape.id,
+      wine = Wine.create(wine_name: wine_name, wine_name_kana: wine_name_kana, vintage: vintage, comment: comment, memo: memo, purchase_price: purchase_price, wine_type: wine_type,grape_id: grape.id,
       selling_price: selling_price, stock: stock, onlist: onlist, state: state, country_id: country_id, winary_id: winary.id, wholesaler_id: wholesaler.id, shop_id: shop_id)
     end
   end
 
+
   def update
     ActiveRecord::Base.transaction do
-      winary = Winary.find_by(id: winary_id)
-      winary.update(winary_name: winary_name, winary_name_kana: winary_name_kana)
-      wholesaler = Wholesaler.find_by(id: wholesaler_id)
-      wholesaler.update(company_name: company_name)
-      Grape.update(grape_name: grape_name )
+      winary=Winary.find_or_create_by(winary_name: winary_name, winary_name_kana: winary_name_kana)
+      wholesaler= Wholesaler.find_or_create_by(company_name: company_name)
+      grape=Grape.find_or_create_by(grape_name: grape_name)
       wine = Wine.find_by(id: wine_id)
       wine.update( wine_name: wine_name, wine_name_kana: wine_name_kana, vintage: vintage, comment: comment, memo: memo, purchase_price: purchase_price, wine_type: wine_type,
-      selling_price: selling_price, stock: stock, onlist: onlist, state: state, country_id: country_id, winary_id: winary.id, wholesaler_id: wholesaler.id, shop_id: shop_id)
+      selling_price: selling_price, stock: stock, onlist: onlist, state: state, country_id: country_id,grape_id: grape.id, winary_id: winary.id, wholesaler_id: wholesaler.id, shop_id: shop_id)
     end
   end
   
@@ -50,7 +48,21 @@ class WineForm
     self.wholesaler_id = wine.wholesaler_id
     self.shop_id = wine.shop_id
     self.winary_id = wine.winary_id
+    self.grape_id = wine.grape_id
     self
+  end
+
+  def copy
+    ActiveRecord::Base.transaction do
+      winary = Winary.find_by(id: winary_id)
+      winary.deep_dup
+      wholesaler = Wholesaler.find_by(id: wholesaler_id)
+      wholesaler.deep_dup
+      grape = Grape.find_by(id: grape_id)
+      grape.deep_dup
+      wine = Wine.find_by(id: wine_id)
+      wine.deep_dup
+    end
   end
   
 

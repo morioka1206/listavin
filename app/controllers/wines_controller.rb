@@ -41,9 +41,11 @@ class WinesController < ApplicationController
 
   def copy
     wine = Wine.find(params[:id])
-    
+    copy_wine = wine.deep_dup
     wine = wine.deep_dup
-    if wine.save
+    # copy_wine = Marshal.load(Marshal.dump(wine))
+    
+    if copy_wine.save
       redirect_to wines_index_path, notice: "コピーしました。"
     else
       flash.now[:alert] = "コピーに失敗しました。"
@@ -69,9 +71,6 @@ class WinesController < ApplicationController
     wine = Wine.find(params[:id])
     wine_form = WineForm.new
     @wine = wine_form.set_attributes(wine)
-    
-    binding.pry
-    
     
   end
 
