@@ -89,10 +89,11 @@ listavinの機能を大きく2つに分けると、
 <br>
 
 [![Image from Gyazo](https://i.gyazo.com/42712f355a8e444413ccae50094e5423.png)](https://gyazo.com/42712f355a8e444413ccae50094e5423)
-
+<br><br>
 **仕入れ価格を入力すると、隣に販売する目安価格が表示されます。**<br>
 
 **販売価格を入力すると、原価率が表示されます。**
+<br>
 <br>
 <br>
 
@@ -112,6 +113,9 @@ listavinの機能を大きく2つに分けると、
 調べたいワインの情報がスピーディーに見つけることができます。
 <br>
 <br>
+[![Image from Gyazo](https://i.gyazo.com/a4d226e75f628b2337fb6b0d8b3e33fd.png)](https://gyazo.com/a4d226e75f628b2337fb6b0d8b3e33fd)
+<br>
+<br>
 
 #### ●検索機能
 
@@ -121,7 +125,7 @@ listavinの機能を大きく2つに分けると、
 <br>
 
 [![Image from Gyazo](https://i.gyazo.com/e26e411d87c76ef9e002e2b5d902fb93.png)](https://gyazo.com/e26e411d87c76ef9e002e2b5d902fb93)
-
+<br><br>
 
 #### ●編集機能
 
@@ -135,7 +139,7 @@ listavinの機能を大きく2つに分けると、
 ヴィンテージが違うのに、もう一度一からワインの情報を入力することは大変です。<br>
 コピーボタンを押すことでコピーされ、編集することで簡単にワインを登録できます。
 <br>
-<br?
+<br>
 
 #### ●削除機能
 
@@ -148,6 +152,9 @@ listavinの機能を大きく2つに分けると、
 ワイン名をクリックすることでワインの詳細ページに遷移し、<br>
 一覧表示でワインの情報がわかります。<br>
 原価率も表示することで利益がどれくらい出るのかもわかりやすくなっています。
+<br>
+<br>
+[![Image from Gyazo](https://i.gyazo.com/426da48197e906aebb6f41008ef7ebd8.png)](https://gyazo.com/426da48197e906aebb6f41008ef7ebd8)
 <br>
 <br>
 <br>
