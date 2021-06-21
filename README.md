@@ -120,6 +120,9 @@ listavinの機能を大きく2つに分けると、
 <br>
 <br>
 
+[![Image from Gyazo](https://i.gyazo.com/e26e411d87c76ef9e002e2b5d902fb93.png)](https://gyazo.com/e26e411d87c76ef9e002e2b5d902fb93)
+
+
 #### ●編集機能
 
 もちろんワインの編集をすることも可能です。<br>
