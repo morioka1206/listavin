@@ -73,7 +73,7 @@
             <div class="navbar-item has-dropdown is-hoverable">
           <div class="navbar-item has-text-dark button-side">店舗名：<%= @shop_name %></div>
           <div class="navbar-dropdown ">
-            <%= link_to   session_path(current_shop.id), method: :delete, data: { confirm: "削除してよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } ,class:"navbar-item" do%>
+            <%= link_to   session_path(current_shop.id), method: :delete, data: { confirm: "ログアウトしてよろしいですか？", commit: "削除する", cancel: "やめる", title: "ご確認ください" } ,class:"navbar-item" do%>
             <span class="icon-text"><i class="fas fa-sign-out-alt"></i>　ログアウト</span>
             <% end %>
             

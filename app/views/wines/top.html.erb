@@ -1,10 +1,10 @@
 
   <nav class="navbar is-light" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://google.com">
+      <span class="navbar-item">
         <%= image_tag 'logo.png' %>
         listavin
-      </a>
+      </span>
     </div>
 
     <div class="navbar-menu">
@@ -37,13 +37,13 @@
 
   
   <% if flash[:notice] %>
-    <div class="index-notice notification is-link">
+    <div class="notification is-link">
       <%= flash[:notice] %>
     </div>
   <% end %>
    
   <% if flash[:alert] %>
-    <div class="index-notice notification is-danger">
+    <div class="notification is-danger">
       <%= flash[:alert] %>
     </div>
   <% end %>
