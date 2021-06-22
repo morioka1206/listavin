@@ -146,13 +146,18 @@ listavinの機能を大きく2つに分けると、
 コピーボタンを押すことでコピーされ、編集することで簡単にワインを登録できます。
 <br>
 <br>
+[![Image from Gyazo](https://i.gyazo.com/28e72a56c2099c371516a3fdc62d377d.gif)](https://gyazo.com/28e72a56c2099c371516a3fdc62d377d)
+<br>
+<br>
 
 #### ●削除機能
 
 いらないワインなど、ワインの情報を消したい場合は削除ボタンを押せば、削除可能です。
 <br>
 <br>
+
 [![Image from Gyazo](https://i.gyazo.com/38878e8e5f5c9329071b95084539a250.gif)](https://gyazo.com/38878e8e5f5c9329071b95084539a250)
+
 <br>
 <br>
 
