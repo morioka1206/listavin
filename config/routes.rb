@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get 'wines/contact'
   get 'wines/winelist'
 
+  root to: "wines#top"
+
+
   resources :shops
   resources :sessions
   get '/login', to: 'sessions#new'
