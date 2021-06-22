@@ -92,7 +92,7 @@ listavinの機能を大きく2つに分けると、
 <br>
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/42712f355a8e444413ccae50094e5423.png)](https://gyazo.com/42712f355a8e444413ccae50094e5423)
+[![Image from Gyazo](https://i.gyazo.com/67710f6d09b512d3778ead3844d0cfe0.gif)](https://gyazo.com/67710f6d09b512d3778ead3844d0cfe0)
 <br><br>
 **仕入れ価格を入力すると、隣に販売する目安価格が表示されます。**<br>
 
@@ -107,7 +107,9 @@ listavinの機能を大きく2つに分けると、
 20件ずつページネーションされます。
 <br>
 <br>
+
 [![Image from Gyazo](https://i.gyazo.com/8d1262f47ae50007cc564fbcce399e13.png)](https://gyazo.com/8d1262f47ae50007cc564fbcce399e13)
+
 <br>
 <br>
 
