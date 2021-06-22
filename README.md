@@ -150,6 +150,9 @@ listavinの機能を大きく2つに分けると、
 いらないワインなど、ワインの情報を消したい場合は削除ボタンを押せば、削除可能です。
 <br>
 <br>
+[![Image from Gyazo](https://i.gyazo.com/38878e8e5f5c9329071b95084539a250.gif)](https://gyazo.com/38878e8e5f5c9329071b95084539a250)
+<br>
+<br>
 
 #### ●詳細ページ
 
