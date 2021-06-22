@@ -4,6 +4,10 @@
 
 <br>
 <br>
+<br>
+
+http://www.listavin.com
+-----------------------------------------------------
 
 # listavinとは
 **listavin（リスタヴァン）はワインの管理アプリケーションです。**
@@ -88,7 +92,7 @@ listavinの機能を大きく2つに分けると、
 <br>
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/42712f355a8e444413ccae50094e5423.png)](https://gyazo.com/42712f355a8e444413ccae50094e5423)
+[![Image from Gyazo](https://i.gyazo.com/67710f6d09b512d3778ead3844d0cfe0.gif)](https://gyazo.com/67710f6d09b512d3778ead3844d0cfe0)
 <br><br>
 **仕入れ価格を入力すると、隣に販売する目安価格が表示されます。**<br>
 
@@ -103,7 +107,9 @@ listavinの機能を大きく2つに分けると、
 20件ずつページネーションされます。
 <br>
 <br>
+
 [![Image from Gyazo](https://i.gyazo.com/8d1262f47ae50007cc564fbcce399e13.png)](https://gyazo.com/8d1262f47ae50007cc564fbcce399e13)
+
 <br>
 <br>
 
@@ -129,8 +135,11 @@ listavinの機能を大きく2つに分けると、
 
 #### ●編集機能
 
-もちろんワインの編集をすることも可能です。<br>
-編集ボタンをクリックして、編集してください。
+登録したワインを編集することができます。<br>
+編集ボタンをクリックして、編集ページに移動して更新できます。
+<br>
+<br>
+[![Image from Gyazo](https://i.gyazo.com/335e0bd086a73879174bff7611476b02.gif)](https://gyazo.com/335e0bd086a73879174bff7611476b02)
 <br>
 <br>
 
@@ -140,10 +149,18 @@ listavinの機能を大きく2つに分けると、
 コピーボタンを押すことでコピーされ、編集することで簡単にワインを登録できます。
 <br>
 <br>
+[![Image from Gyazo](https://i.gyazo.com/28e72a56c2099c371516a3fdc62d377d.gif)](https://gyazo.com/28e72a56c2099c371516a3fdc62d377d)
+<br>
+<br>
 
 #### ●削除機能
 
 いらないワインなど、ワインの情報を消したい場合は削除ボタンを押せば、削除可能です。
+<br>
+<br>
+
+[![Image from Gyazo](https://i.gyazo.com/38878e8e5f5c9329071b95084539a250.gif)](https://gyazo.com/38878e8e5f5c9329071b95084539a250)
+
 <br>
 <br>
 
