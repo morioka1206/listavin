@@ -3,7 +3,6 @@
     <td><%= link_to wine.wine_name, wine_path(wine.id) %>
     <td><%= wine.wine_name_kana%></td>
     <td><%= wine.winary.winary_name%></td>
-    <td><%= wine.winary.winary_name_kana%></td>
     <td><%= wine.grape.grape_name%></td>
     <td><%= wine.vintage%></td>
     <td><%= wine.purchase_price %></td>
@@ -14,6 +13,7 @@
         <% else %>
         <td><%= "" %></td>
     <%end%>
+    <td><%= wine.stock%></td>
     
     <td class="is-flex-desctop">
     
