@@ -9,6 +9,16 @@
 http://www.listavin.com
 -----------------------------------------------------
 
+#### testログイン用
+
+- email
+:
+example@example.com
+
+- password
+:
+password
+
 # listavinとは
 **listavin（リスタヴァン）はワインの管理アプリケーションです。**
 <br>
@@ -130,7 +140,7 @@ listavinの機能を大きく2つに分けると、
 <br>
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/e26e411d87c76ef9e002e2b5d902fb93.png)](https://gyazo.com/e26e411d87c76ef9e002e2b5d902fb93)
+[![Image from Gyazo](https://i.gyazo.com/f7ef13fa81be9cb1d884732b2e87a398.gif)](https://gyazo.com/f7ef13fa81be9cb1d884732b2e87a398)
 <br><br>
 
 #### ●編集機能
@@ -177,25 +187,34 @@ listavinの機能を大きく2つに分けると、
 <br>
 
 # 使用技術
-- フロントエンド
+- **フロントエンド**
   - HTML
   - CSS
   - CSSフレームワーク Bulma
+  - Font Awesome
+  - Google Fonts (Hind,Quiksand,PT sans, New Tegomin,Lexend,Kiwi Maru,Noto Sans JP, Sawarabi Gothic, Hannari)　
   - Vue.js
 <br>
 
-- バックエンド
+- **バックエンド**
   - Ruby 2.6.6
   - Ruby on Rails 6.1.3
+<br>
 
-- インフラ
-  - AWS(EC2, VPC)
+- **インフラ**
+  - AWS(EC2, VPC, Route53, S3)
   - MySQL
   - nginx
   - Unicorn
-  - Docker, Docker-compose
-
+ 
+ <br>
+ <br>
+ <br>
+ 
 # ER図
+
+<br>
+<br>
 
 [![Image from Gyazo](https://i.gyazo.com/c412f062c5a3784c73d5a049fbaff357.png)](https://gyazo.com/c412f062c5a3784c73d5a049fbaff357)
 
