@@ -9,6 +9,16 @@
 http://www.listavin.com
 -----------------------------------------------------
 
+#### testログイン用
+
+- email
+:
+example@example.com
+
+- password
+:
+password
+
 # listavinとは
 **listavin（リスタヴァン）はワインの管理アプリケーションです。**
 <br>
