@@ -140,7 +140,7 @@ listavinの機能を大きく2つに分けると、
 <br>
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/e26e411d87c76ef9e002e2b5d902fb93.png)](https://gyazo.com/e26e411d87c76ef9e002e2b5d902fb93)
+[![Image from Gyazo](https://i.gyazo.com/f7ef13fa81be9cb1d884732b2e87a398.gif)](https://gyazo.com/f7ef13fa81be9cb1d884732b2e87a398)
 <br><br>
 
 #### ●編集機能
