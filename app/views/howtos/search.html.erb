@@ -1,0 +1,71 @@
+<meta http-equiv="refresh" content="60;URL=http://localhost:3000/howtos/detail">
+
+
+<nav class="navbar is-light">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <div class="navbar-item">
+                          <%= image_tag 'logo.png' %>
+                          listavin
+                        </div>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <div class="tabs is-right">
+                                <ul>
+                                    <li><%= link_to  "❶店舗登録",  howtos_shop_registration_path %></li>
+                                    <li><%= link_to  "❷ワイン登録",  howtos_wine_registration_path %></li>
+                                    <li><%= link_to  "❸コピー・削除",  howtos_copy_path %></li>
+                                    <li><%= link_to  "❹編集",  howtos_edit_path %></li>
+                                    <li class="is-active"><%= link_to  "❺検索",  howtos_search_path %></li>
+                                    <li><%= link_to  "❻詳細",  howtos_detail_path %></li>
+                                    <li><%= link_to  "❼ワインリスト",  howtos_winelist_path %></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</nav>
+<section class="hero is-fullheight is-default is-bold listavin-color">
+            
+        <div class="hero-body login-hero-body">
+            <div>
+                <div class="columns">
+                    <div class="video">
+                            <video autoplay muted playsinline width="600px" height="400px">
+                              <source src="https://i.gyazo.com/5a3805629c921cb2b4f660e6e9d3be54.mp4" alt="Description">> 
+                            </video> 
+
+                            <%# <%= image_tag 'logoLr.png' %>
+                        <%# </figure> %>
+                    </div>
+                    <div class="">
+                        <h1 class="title is-2 has-text-centered">
+                            ワインを検索する
+                        </h1>
+                        <h2 class="is-size-6 lexend  has-text-centered">
+                            見つけたいワインを探しましょう。
+                        </h2>
+                        <br>
+                        <p class="hannari is-size-6">登録したワインは大量にあるかと思います。</p>
+                        <p class="hannari is-size-6">「これくらいの価格のワインがいい。」</p>
+                        <p class="hannari is-size-6">「日本の赤ワインが飲みたい。」</p>
+                        <p class="hannari is-size-6">そんな要望にスムーズに応えるために検索機能を使いましょう。</p>
+                        <br>
+                        <p class="hannari is-size-6">値段帯での検索や国名、生産者での検索もできます。</p>
+                        <br>
+                        <p class="hannari is-size-6">ソート機能を使って並び替えもできます。</p>
+                        <p class="hannari is-size-6">スムーズな接客につながります。</p>
+                        <br>
+                        <br>
+                
+
+                        <%= render 'howtos/howto/start_listavin' %>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<%= render 'wines/index/footer' %>

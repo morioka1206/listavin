@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete 'logout', to: 'sessions#destroy'
+
   get 'wines/top'
   get 'wines/howto'
 
@@ -25,5 +26,16 @@ Rails.application.routes.draw do
       get 'winelist_search'
     end
   end
+
+  # resources :howtos
+
+  get 'howtos', to: "howtos#index"
+  get 'howtos/detail'
+  get 'howtos/copy'
+  get 'howtos/shop_registration'
+  get 'howtos/wine_registration'
+  get 'howtos/search'
+  get 'howtos/edit'
+  get 'howtos/winelist'
 
 end

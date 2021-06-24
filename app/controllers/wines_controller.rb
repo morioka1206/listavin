@@ -17,7 +17,6 @@ class WinesController < ApplicationController
     
   end
   
-  
   def index
     @q = Wine.ransack(params[:q])
     # @pagy, @wines = pagy(Wine.all)
@@ -46,7 +45,7 @@ class WinesController < ApplicationController
     # copy_wine = Marshal.load(Marshal.dump(wine))
     
     if copy_wine.save
-      redirect_to wines_index_path, notice: "コピーしました。"
+      redirect_to wines_path, notice: "コピーしました。"
     else
       flash.now[:alert] = "コピーに失敗しました。"
       render :index
@@ -60,7 +59,7 @@ class WinesController < ApplicationController
   def create
     @wine = WineForm.new(wine_params)
     if @wine.save
-      redirect_to wines_index_path, notice: "新規作成しました。"
+      redirect_to wines_path, notice: "新規作成しました。"
     else
       flash.now[:alert] = "記入漏れがあります。入力してください。"
       render :new
@@ -86,7 +85,7 @@ class WinesController < ApplicationController
     @wine = WineForm.new(update_wine_params)
     
       if @wine.update
-        redirect_to wines_index_path, notice: "更新しました。"
+        redirect_to wines_path, notice: "更新しました。"
       else
         flash.now[:alert] = "記入漏れがあります。入力してください。"
         render 'edit'
@@ -96,7 +95,7 @@ class WinesController < ApplicationController
   def destroy
     wine = Wine.find(params[:id])
     if wine.destroy!
-      redirect_to wines_index_path, notice: "削除しました。"
+      redirect_to wines_path, notice: "削除しました。"
     else
       flash.now[:alert] = "削除できませんでした。"
       render "index"

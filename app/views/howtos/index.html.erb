@@ -1,0 +1,74 @@
+<meta http-equiv="refresh" content="30;URL=http://localhost:3000/howtos/shop_registration">
+
+<nav class="navbar is-light">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <div class="navbar-item">
+                          <%= image_tag 'logo.png' %>
+                          listavin
+                        </div>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <div class="tabs is-right">
+                                <ul>
+                                    <li><%= link_to  "❶店舗登録",  howtos_shop_registration_path %></li>
+                                    <li><%= link_to  "❷ワイン登録",  howtos_wine_registration_path %></li>
+                                    <li><%= link_to  "❸コピー・削除",  howtos_copy_path %></li>
+                                    <li><%= link_to  "❹編集",  howtos_edit_path %></li>
+                                    <li><%= link_to  "❺検索",  howtos_search_path %></li>
+                                    <li><%= link_to  "❻詳細",  howtos_detail_path %></li>
+                                    <li><%= link_to  "❼ワインリスト",  howtos_winelist_path %></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</nav>
+<section class="hero is-fullheight is-default is-bold listavin-color">
+            
+        <div class="hero-body login-hero-body">
+            <div>
+                <div class="columns">
+                    <div class="video">
+                            <video autoplay muted playsinline width="600px" height="400px">
+                              <source src="https://i.gyazo.com/1c1bbb22f84ecd6b4bc09b6472049e00.mp4" alt="Description">> 
+                            </video> 
+
+                            <%# <%= image_tag 'logoLr.png' %>
+                        <%# </figure> %>
+                    </div>
+                    <div class="">
+                        <h1 class="title is-2 has-text-centered">
+                            listavinの使いかた
+                        </h1>
+                        <h2 class="is-size-6 lexend  has-text-centered">
+                            listavinの使い方をご説明します。
+                        </h2>
+                        <br>
+                        <p class="hannari is-size-6">listavinとはどのようなアプリかをご説明させてください。</p>
+                        <p class="hannari is-size-6">listavinは無料で使えるワイン管理アプリケーション。</p>
+                        <p class="hannari is-size-6">そしてワインリストアプリケーションです。</p>
+                        <br>
+                        <br>
+                        <p class="hannari is-size-6 has-text-centered">チュートリアルをどうぞご覧ください。</p>
+                        <br>
+                        <p class="is-size-7">自動的にチュートリアルが進みます。</p>
+                        <p class="is-size-7">移動しない場合は右上のボタンを押してください。</p>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        
+                        
+                        <p class="has-text-centered">
+                            <%= link_to  "チュートリアルをはじめる", howtos_shop_registration_path, class:"button is-info is-medium is-outlined" %>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</section>
+<%= render 'wines/index/footer' %>

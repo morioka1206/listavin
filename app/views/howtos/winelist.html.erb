@@ -1,0 +1,70 @@
+<nav class="navbar is-light">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <div class="navbar-item">
+                          <%= image_tag 'logo.png' %>
+                          listavin
+                        </div>
+                    </div>
+                    <div id="navbarMenu" class="navbar-menu">
+                        <div class="navbar-end">
+                            <div class="tabs is-right">
+                                <ul>
+                                    <li><%= link_to  "❶店舗登録",  howtos_shop_registration_path %></li>
+                                    <li><%= link_to  "❷ワイン登録",  howtos_wine_registration_path %></li>
+                                    <li><%= link_to  "❸コピー・削除",  howtos_copy_path %></li>
+                                    <li><%= link_to  "❹編集",  howtos_edit_path %></li>
+                                    <li><%= link_to  "❺検索",  howtos_search_path %></li>
+                                    <li><%= link_to  "❻詳細",  howtos_detail_path %></li>
+                                    <li class="is-active"><%= link_to  "❼ワインリスト",  howtos_winelist_path %></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+</nav>
+<section class="hero is-fullheight is-default is-bold listavin-color">
+            
+        <div class="hero-body login-hero-body">
+            <div>
+                <div class="columns">
+                    <div class="video">
+                            <video autoplay muted playsinline width="600px" height="400px">
+                              <source src="https://i.gyazo.com/5a3805629c921cb2b4f660e6e9d3be54.mp4" alt="Description">> 
+                            </video> 
+
+                            <%# <%= image_tag 'logoLr.png' %>
+                        <%# </figure> %>
+                    </div>
+                    <div class="">
+                        <h1 class="title is-2 has-text-centered has-text-dark">
+                            ワインリスト
+                        </h1>
+                        <h2 class="is-size-6 lexend  has-text-centered">
+                            データベースと連動した新しいワインリスト
+                        </h2>
+                        <br>
+                        <p class="hannari is-size-6">紙で印刷されたワインリストを使っていると</p>
+                        <p class="hannari is-size-6">ヴィンテージが違っていたり、もうなかったり</p>
+                        <p class="hannari is-size-6">はたまた、スペルミスや値段が違ったり。</p>
+                        <p class="hannari is-size-6">でもレイアウトを変えたり、印刷するのは面倒だったりします。</p>
+                        <br>
+                        <p class="hannari is-size-6">listavinを使えば、データベースと連動するのでそんな心配はいりません。</p>
+                        <br>
+                        <p class="hannari is-size-6">在庫がないワインは表示されず、まだ寝かせたいワインは載せないなんてことも。</p>
+                        <p class="hannari is-size-6">ストレスフリーなワイン管理を実現できます。</p>
+                        <br>
+                        <br>
+                        <br>
+
+                        <%= render 'howtos/howto/start_listavin' %>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+</section>
+<%= render 'wines/index/footer' %>
