@@ -6,7 +6,13 @@
 <br>
 <br>
 
+
+エラー修正中のため一旦、AWSは停止中
 http://www.listavin.com
+<br>
+こちらでご覧ください
+https://listavin.herokuapp.com/
+
 -----------------------------------------------------
 
 #### testログイン用
