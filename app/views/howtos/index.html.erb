@@ -19,6 +19,7 @@
                                     <li><%= link_to  "❺検索",  howtos_search_path %></li>
                                     <li><%= link_to  "❻詳細",  howtos_detail_path %></li>
                                     <li><%= link_to  "❼ワインリスト",  howtos_winelist_path %></li>
+                                    <li><%= link_to  "トップページへ戻る",  root_path, class: "button is-outlined is-warning" %></li>
 
                                 </ul>
                             </div>
@@ -32,12 +33,9 @@
             <div>
                 <div class="columns">
                     <div class="video">
-                            <video autoplay muted playsinline width="600px" height="400px">
-                              <source src="https://i.gyazo.com/1c1bbb22f84ecd6b4bc09b6472049e00.mp4" alt="Description">> 
-                            </video> 
-
-                            <%# <%= image_tag 'logoLr.png' %>
-                        <%# </figure> %>
+                        <figure class="howto-image">
+                            <img src="https://i.gyazo.com/358451d53e0e13f43ae165dc5fd4ea83.png" width= "540">
+                        </figure>
                     </div>
                     <div class="">
                         <h1 class="title is-2 has-text-centered">
@@ -63,7 +61,7 @@
                         
                         
                         <p class="has-text-centered">
-                            <%= link_to  "チュートリアルをはじめる", howtos_shop_registration_path, class:"button is-info is-medium is-outlined" %>
+                            <%= link_to  "チュートリアルをはじめる", howtos_shop_registration_path, class:"button is-primary is-medium is-outlined" %>
                         </p>
                     </div>
                 </div>
