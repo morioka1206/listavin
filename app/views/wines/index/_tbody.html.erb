@@ -1,9 +1,9 @@
 <tr>
     <td><%= wine.id%>
-    <td><%= link_to wine.wine_name, wine_path(wine.id) %>
-    <td><%= wine.wine_name_kana%></td>
-    <td><%= wine.winary.winary_name%></td>
-    <td><%= wine.grape.grape_name%></td>
+    <td><%= link_to wine.wine_name.truncate(20), wine_path(wine.id) %>
+    <td><%= wine.wine_name_kana.truncate(20)%></td>
+    <td><%= wine.winary.winary_name.truncate(20)%></td>
+    <td><%= wine.grape.grape_name.truncate(20)%></td>
     <td><%= wine.vintage%></td>
     <td><%= wine.purchase_price %></td>
     <td><%= wine.selling_price%></td>
