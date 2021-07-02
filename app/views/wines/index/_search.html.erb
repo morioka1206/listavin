@@ -19,12 +19,12 @@
                       <%= f.label :selling_price, "販売価格帯で検索する", class:"is-size-7"%>
                       </div>
                       <span>
-                          <%= f.radio_button :selling_price_lteq, "4000", class:"radio" %>4,000円以下
-                          <%= f.radio_button :selling_price_lteq, "6000", class:"radio" %>6,000円以下
-                          <%= f.radio_button :selling_price_lteq, "8000", class:"radio" %>8,000円以下
-                          <%= f.radio_button :selling_price_lteq, "10000", class:"radio" %>10,000円以下
-                          <%= f.radio_button :selling_price_lteq, "20000", class:"radio" %>20,000円以下
-                          <%= f.radio_button :selling_price_gteq, "20000", class:"radio" %>20,000円以上
+                          <%= f.radio_button :selling_price_lteq, "4000", class:"radio" %><%= f.label :selling_price_lteq, "4,000円以下", value: 4000 %>
+                          <%= f.radio_button :selling_price_lteq, "6000", class:"radio" %><%= f.label :selling_price_lteq, "6,000円以下", value: 6000 %>
+                          <%= f.radio_button :selling_price_lteq, "8000", class:"radio" %><%= f.label :selling_price_lteq, "8,000円以下", value: 8000 %>
+                          <%= f.radio_button :selling_price_lteq, "10000", class:"radio" %><%= f.label :selling_price_lteq, "10,000円以下", value: 10000 %>
+                          <%= f.radio_button :selling_price_lteq, "20000", class:"radio" %><%= f.label :selling_price_lteq, "20,000円以下", value: 20000 %>
+                          <%= f.radio_button :selling_price_gteq, "20000", class:"radio" %><%= f.label :selling_price_gteq, "20,000円以上", value: 20000 %>
                       </span>
                     </div>
 
