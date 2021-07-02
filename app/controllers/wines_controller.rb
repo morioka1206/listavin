@@ -18,7 +18,7 @@ class WinesController < ApplicationController
   end
   
   def index
-    @q = Wine.ransack(params[:q])
+    @q = Wine.order("wine_name").ransack(params[:q])
     # @pagy, @wines = pagy(Wine.all)
     @pagy,@wines = pagy(@q.result, items: 30)
     
@@ -112,7 +112,7 @@ class WinesController < ApplicationController
   end
   
   def onlist_set_q
-    @q = Wine.where("onlist = true and stock >=  1").ransack(params[:q])
+    @q = Wine.where("onlist = true and stock >=  1").order("wine_type").ransack(params[:q])
   end
 
   def wine_params
