@@ -3,7 +3,7 @@ class WinesController < ApplicationController
 
   # before_action :wine_params, only: [:show, :update, :edit, :delete]
   include Pagy::Backend
-  before_action :set_q, only: [:index, :search, :copy]
+  before_action :set_q, only: [:search, :copy]
   before_action :onlist_set_q, only: [:winelist, :winelist_search]
   before_action :shop_name, except: %i[contact top]
   skip_before_action :login_required, only: [:top, :contact]
@@ -18,9 +18,9 @@ class WinesController < ApplicationController
   end
   
   def index
-    @q = Wine.order("wine_name").ransack(params[:q])
+    @q = Wine.order("wine_name").where(shop_id: current_shop.id).ransack(params[:q])
     # @pagy, @wines = pagy(Wine.all)
-    @pagy,@wines = pagy(@q.result(shop_id: current_shop.id), items: 30)
+    @pagy,@wines = pagy(@q.result, items: 30)
     
     
   end
@@ -108,7 +108,7 @@ class WinesController < ApplicationController
   private
 
   def set_q
-    @q = Wine.find_by(shop_id: current_shop.id).ransack(params[:q])
+    @q = Wine.ransack(params[:q])
   end
   
   def onlist_set_q
