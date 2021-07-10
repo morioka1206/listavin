@@ -20,7 +20,7 @@ class WinesController < ApplicationController
   def index
     @q = Wine.order("wine_name").ransack(params[:q])
     # @pagy, @wines = pagy(Wine.all)
-    @pagy,@wines = pagy(@q.result, items: 30)
+    @pagy,@wines = pagy(@q.result(shop_id: current_shop.id), items: 30)
     
     
   end
