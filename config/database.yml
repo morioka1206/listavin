@@ -52,6 +52,6 @@ production:
   <<: *default
   database: listavin_production
   username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
+  password: listavin1206
   host: listavin-mysql.cxdshknkzwsd.ap-northeast-1.rds.amazonaws.com
   # socket: /var/lib/mysql/mysql.sock
