@@ -107,7 +107,8 @@ class WinesController < ApplicationController
   private
 
   def set_q
-    @q = Wine.ransack(params[:q])
+    @q = Wine.order("wine_name").where(shop_id: current_shop.id).ransack(params[:q])
+    # @q = Wine.ransack(params[:q])
   end
   
   def onlist_set_q
