@@ -3,7 +3,7 @@ class WinesController < ApplicationController
 
   # before_action :wine_params, only: [:show, :update, :edit, :delete]
   include Pagy::Backend
-  before_action :set_q, only: [:search, :copy]
+  before_action :set_q, only: %i[index search copy]
   before_action :onlist_set_q, only: [:winelist, :winelist_search]
   before_action :shop_name, except: %i[contact top]
   skip_before_action :login_required, only: [:top, :contact]
