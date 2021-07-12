@@ -19,7 +19,6 @@ class WinesController < ApplicationController
   
   def index
     @q = Wine.order("wine_name").where(shop_id: current_shop.id).ransack(params[:q])
-    # @pagy, @wines = pagy(Wine.all)
     @pagy,@wines = pagy(@q.result, items: 30)
     
     
